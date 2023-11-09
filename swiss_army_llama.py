@@ -43,6 +43,13 @@ from magic import Magic
 import fast_vector_similarity as fvs
 import uvloop
 
+
+import ssl
+ssl._create_default_https_context = ssl._create_unverified_context
+
+
+
+
 asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
 logger = setup_logger()
 
